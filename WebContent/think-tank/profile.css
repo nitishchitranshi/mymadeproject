@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+.profile-part {
+	margin-top:30px;
+display:inline;
+}
+.profile-part a {
+	color:#999;
+	text-decoration:none;
+}
+.profile img{
+width: 16.66666667%;
+float:left;
+border-radius:50%;
+}
+
+.profile-figure{
+	width: 83.33333333%;
+	float: left;
+	position: relative;
+	padding:46px 15px 0px 15px;
+	box-sizing: border-box;
+	display:block;
+	text-decoration:none;
+	line-height:1.5em;
+}
+
+.list-inline{
+	padding-left: 0;
+	margin-left: -5px;
+	list-style: none;
+}
+.list-inline li{
+	display:inline-block;
+	
+}
+.list-inline a{
+	text-decoration:none;
+	padding-left:4px;
+	line-height:2em;
+}
+.create{
+	width:33.33333333%;
+	
+}
+
+.follow table tr td{
+	padding-top:5px!important;
+	padding-bottom:5px!important;
+}
+a{
+	color:#999;
+	text-decoration:none;

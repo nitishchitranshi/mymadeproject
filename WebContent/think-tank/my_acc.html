@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My Made</title>
+	<meta charset="utf-8">
+	<meta name="author" content="scrum technology">
+	<meta name="description" content=""/>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+    	<link rel="stylesheet" type="text/css" href="profile.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+<link href="../themes/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../themes/mcVideoPlugin.js" type="text/javascript"></script>
+    <script src="../themes/js-image-slider.js" type="text/javascript"></script>
+    <!-------->
+<script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('a.login-window').click(function() {
+		
+		// Getting the variable's value from a link 
+		var loginBox = $(this).attr('href');
+
+		//Fade in the Popup and add close button
+		$(loginBox).fadeIn(300);
+		
+		//Set the center alignment padding + border
+		var popMargTop = ($(loginBox).height() + 24) / 2; 
+		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		
+		$(loginBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		
+		// Add the mask to body
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+		
+		return false;
+	});
+	
+	// When clicking on the button close or the mask layer the popup closed
+	$('a.close, #mask').live('click', function() { 
+	  $('#mask , .login-popup').fadeOut(300 , function() {
+		  console.log("closing the login popup");
+		$('#mask').remove();  
+	}); 
+	return false;
+	});
+});
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>    
+</head>
+<body>
+
+
+        <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="../img/cancel_button.PNG" class="btn_close" title="Close Window" alt="Close" /></a>
+          <div class="popup-nav">
+				<ul>
+					<li><a class="selected-nav">LOGIN</a></li>
+					<li><a>SIGN UP</a></li>
+				</ul>
+				</div>
+          <form method="post" class="signin" action="#">
+          
+				
+                <fieldset class="textbox">
+            	<label class="username">
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                </label>
+                
+                <label class="password">
+                <input id="password" name="password" value="" type="password" placeholder="Password">
+                </label>
+                 
+                 <p>
+                <a class="forgot" href="#">Forgot password?<br>
+Request a new one</a>
+                </p>
+                <p style="text-align:left; width:274px; margin-top:50px;"> By logging in, you agree to out <a style="color:#00f5a7;text-decoration:none;" href="#">T&amp;C </a>and that you have read our<a style="color:#00f5a7;  text-decoration:none;" href="#">Privacy Policy</a>
+                </p>
+                <button class="submit button" type="button">Login</button>
+                
+               
+                
+                </fieldset>
+          </form>
+		</div>
+    <!-- End trasparent_nav -->
+
+	<header class="fixed_nav" style="margin-top: 0px">
+				<div class="wrapper">
+        <nav>
+				<ul><li style="padding-top:12px"><a href="#"><img src="../img/logo_left_decor.png" alt="mymade"></a>
+					<li style="padding-top:12px"><a href="enquire.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('enquire_fixed','','../img/sample1.png',1)"><img id="enquire_fixed" src="../img/enquire_ico.png" alt="Enquire"></a></li>
+                  <li style="padding-top:12px; cursor:default"><img src="../img/separator.png"></li>
+					<li style="padding-top:12px"><a href="gifting.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('gifting_fixed','','../img/gift_ico_focused.png',1)"><img id="gifting_fixed" src="../img/gift_ico.png" alt="Gifting"></a></li>
+                   <li><a href="#"><img src="../img/mymade_logosmall.png" alt="mymade"></a>
+                    <li style="padding-top:12px"><a href="cart.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('cart_fixed','','../img/cart_focused_ico.png',1)"><img id="cart_fixed" src="../img/cart_ico.png" alt="Cart"></a></li>
+                    <li style="padding-top:12px; cursor:default"><img src="../img/separator.png"></li>
+                   <li style="padding-top:12px"><a href="#login-box" class="login-window" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('login_fixed','','../img/login_focused_ico.png',1)"><img id="login_fixed" src="../img/login_ico.png" alt="Login"></a></li>
+                    <li style="padding-top:12px"><a href="#"><img src="../img/logo_right_decor.png" alt="mymade"></a>
+				</ul>
+		  </nav>
+            <section class="billboard2">
+    <ul>            
+                    <li><a href="#">INDIAN WEAR</a></li>
+					<li><a href="#">WESTERN WEAR</a></li>
+					<li><a href="#">OCCASION WEAR</a></li>
+					<li><a href="#">CREATE</a></li>
+                    <li><a href="#">LOOK ALIKE</a></li>
+					<li><a href="#">THINK TANK</a></li>
+					<li><a href="#">MY MADE</a></li>
+					<li><a href="#">INSPIRATIONS</a></li>
+    </ul>
+	</section>
+            </div>
+	</header>
+    <!-- End fixed_nav -->
+    <!--- Wrapper----->
+    <div>
+    <section class="main-part" style="margin-top:120px">
+      
+  <div style="margin:30px 40px">
+    <h1 style="margin-left:15px; color:#CCC; font-size:24px; padding-bottom:10px">Mymade Account</h1>
+
+    <span style="margin-left:15px; font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">You are logged in as Nitish Chitranshi (nitish.chitranshi@gmail.com). Not you? <a href="#" style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px">LOGOUT</a></span>
+    <hr>
+    <div style="line-height:1.5em">
+        <div class="left">
+            <h4 style="font-style:italic; font-size:18px; font-weight:100">General Settings</h4>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Full Name:</label> <span>Nitish</span> <span>Chitranshi</span> <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Earning Preference <a href="" style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 3px 3px 3px; text-decoration:none; background-color:#666; border-radius:2px">?</a>:</label> <span>Credit</span> <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+                $0 in rewards available. 
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Email Address:</label> <span><a href="mailto:nitish.chitranshi@gmail.com">nitish.chitranshi@gmail.com</a></span> <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Password:</label> •••••••• <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+            </p>
+            <hr>
+            <h4 style="font-style:italic; font-size:18px; font-weight:100">Email Notifications</h4>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">Send me an email when:</p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <input type="checkbox" name="follower_emails" id="follower_emails" class="custom_checkbox emails" checked="checked">
+                <label for="follower_emails"><span></span> I have a new follower</label>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <input type="checkbox" name="like_emails" id="like_emails" class="custom_checkbox emails" checked="checked">
+                <label for="like_emails"><span></span> Someone likes my creation</label>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <input type="checkbox" name="purchase_emails" id="purchase_emails" class="custom_checkbox emails" checked="checked">
+                <label for="purchase_emails"><span></span> Someone purchases my creation</label>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <input type="checkbox" name="comment_emails" id="comment_emails" class="custom_checkbox emails" checked="checked">
+                <label for="comment_emails"><span></span> Someone comments on my creation</label>
+            </p>
+            <p><img style="display: none;" id="emailLoader" src="./account_files/ajax-loader.gif"></p>
+        </div>
+        <div class="left">
+            <h4 style="font-style:italic; font-size:18px; font-weight:100">Think Tank Profile</h4>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Username:</label> <span>nitish.chitranshi</span> <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Visibility <a href="" style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 3px 3px 3px; text-decoration:none; background-color:#666; border-radius:2px">?</a>:</label> <span>Public</span> <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+            </p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Biography:</label>
+                </p>
+                <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                    <span>(not set)</span>
+                    <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+                </p>
+            <p></p>
+            <p style="font-family:Tahoma, Geneva, sans-serif; font-size:11px; font-weight:100">
+                <label>Profile Picture:</label>
+                
+                No image set
+                
+                <a href="#" style="font-family:Tahoma, Geneva, sans-serif; font-size:10px; color:#000; padding:0 2px !important; text-decoration:none; background-color:transparent; border:1px solid #ddd !important; border-radius:2px!important"><span>edit</span></a>
+            </p>
+            <p>
+                <a href="#" style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px"><span>View My Think Tank Profile</span></a>
+            </p>
+        </div>
+    </div>
+    <hr>
+</div>
+</section>
+  </div>
+    <footer>
+	  <div class="wrapper">
+		  <div class="footer_widget">
+				 	</div>
+		</div>
+	</footer>
+<!-- End Footer -->
+	</body>
+</html>

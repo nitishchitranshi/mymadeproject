@@ -1,0 +1,55 @@
+.inner-head{
+	border-bottom: solid 1px #d3d3d3;
+padding: 5px 0px 5px 0px;
+}
+
+.non-selected a{
+	text-decoration: none;
+	color:#999999;
+	
+}
+.inner-head ul{
+	list-style: none;
+}
+
+.inner-head ul li{
+	display: inline;
+padding-top: 5px;
+padding-right: 20px;
+font-size: 15px;
+padding-bottom: 9px;
+}
+
+.inner-head ul li a{
+	text-decoration: none;
+}
+
+.selected a{
+	text-decoration: none;
+	color:rgb(0,255,192)!important;
+}
+
+
+
+#nav li ul { /* second-level lists */
+	position: absolute;
+	background: #F8F8F8;
+	width: 100px;
+	padding:5px;
+	left:-999px;
+}
+
+#nav li:hover ul, #nav li.sfhover ul { /* lists nested under hovered list items */
+	
+left: 183px;
+top: 150px;
+}
+
+#content {
+	clear: left;
+}
+
+.dress table tr td{
+	padding-top:5px!important;
+	padding-bottom:5px!important;	
+}

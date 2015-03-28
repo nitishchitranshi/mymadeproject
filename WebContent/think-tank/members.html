@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>My Made</title>
+	<meta charset="utf-8">
+	<meta name="author" content="scrum technology">
+	<meta name="description" content=""/>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="profile.css">
+	<link rel="stylesheet" type="text/css" href="../css/dress.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery.js"></script>
+
+<link href="../themes/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../themes/mcVideoPlugin.js" type="text/javascript"></script>
+    <script src="../themes/js-image-slider.js" type="text/javascript"></script>
+    <!-------->
+<script type="text/javascript" src="../js/login.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('a.login-window').click(function() {
+		
+		// Getting the variable's value from a link 
+		var loginBox = $(this).attr('href');
+
+		//Fade in the Popup and add close button
+		$(loginBox).fadeIn(300);
+		
+		//Set the center alignment padding + border
+		var popMargTop = ($(loginBox).height() + 24) / 2; 
+		var popMargLeft = ($(loginBox).width() + 24) / 2; 
+		
+		$(loginBox).css({ 
+			'margin-top' : -popMargTop,
+			'margin-left' : -popMargLeft
+		});
+		
+		// Add the mask to body
+		$('body').append('<div id="mask"></div>');
+		$('#mask').fadeIn(300);
+		
+		return false;
+	});
+	
+	// When clicking on the button close or the mask layer the popup closed
+	$('a.close, #mask').live('click', function() { 
+	  $('#mask , .login-popup').fadeOut(300 , function() {
+		  console.log("closing the login popup");
+		$('#mask').remove();  
+	}); 
+	return false;
+	});
+});
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>    
+</head>
+<body>
+
+
+        <div id="login-box" class="login-popup">
+        <a href="#" class="close"><img src="../img/cancel_button.PNG" class="btn_close" title="Close Window" alt="Close" /></a>
+          <div class="popup-nav">
+				<ul>
+					<li><a class="selected-nav">LOGIN</a></li>
+					<li><a>SIGN UP</a></li>
+				</ul>
+				</div>
+          <form method="post" class="signin" action="#">
+          
+				
+                <fieldset class="textbox">
+            	<label class="username">
+                <input id="username" name="username" value="" type="text" autocomplete="on" placeholder="Username">
+                </label>
+                
+                <label class="password">
+                <input id="password" name="password" value="" type="password" placeholder="Password">
+                </label>
+                 
+                 <p>
+                <a class="forgot" href="#">Forgot password?<br>
+Request a new one</a>
+                </p>
+                <p style="text-align:left; width:274px; margin-top:50px;"> By logging in, you agree to out <a style="color:#00f5a7;text-decoration:none;" href="#">T&amp;C </a>and that you have read our<a style="color:#00f5a7;  text-decoration:none;" href="#">Privacy Policy</a>
+                </p>
+                <button class="submit button" type="button">Login</button>
+                
+               
+                
+                </fieldset>
+          </form>
+		</div>
+    <!-- End trasparent_nav -->
+
+	<header class="fixed_nav" style="margin-top: 0px">
+				<div class="wrapper">
+       <nav>
+				<ul><li style="padding-top:12px"><a href="#"><img src="../img/logo_left_decor.png" alt="mymade"></a>
+					<li style="padding-top:12px"><a href="enquire.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('enquire_fixed','','../img/sample1.png',1)"><img id="enquire_fixed" src="../img/enquire_ico.png" alt="Enquire"></a></li>
+                  <li style="padding-top:12px; cursor:default"><img src="../img/separator.png"></li>
+					<li style="padding-top:12px"><a href="gifting.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('gifting_fixed','','../img/gift_ico_focused.png',1)"><img id="gifting_fixed" src="../img/gift_ico.png" alt="Gifting"></a></li>
+                   <li><a href="#"><img src="../img/mymade_logosmall.png" alt="mymade"></a>
+                    <li style="padding-top:12px"><a href="cart.jsp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('cart_fixed','','../img/cart_focused_ico.png',1)"><img id="cart_fixed" src="../img/cart_ico.png" alt="Cart"></a></li>
+                    <li style="padding-top:12px; cursor:default"><img src="../img/separator.png"></li>
+                   <li style="padding-top:12px"><a href="#login-box" class="login-window" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('login_fixed','','../img/login_focused_ico.png',1)"><img id="login_fixed" src="../img/login_ico.png" alt="Login"></a></li>
+                    <li style="padding-top:12px"><a href="#"><img src="../img/logo_right_decor.png" alt="mymade"></a>
+				</ul>
+		  </nav>
+            <section class="billboard2">
+    <ul>            
+                    <li><a href="#">INDIAN WEAR</a></li>
+					<li><a href="#">WESTERN WEAR</a></li>
+					<li><a href="#">OCCASION WEAR</a></li>
+					<li><a href="#">CREATE</a></li>
+                    <li><a href="#">LOOK ALIKE</a></li>
+					<li><a href="#">THINK TANK</a></li>
+					<li><a href="#">MY MADE</a></li>
+					<li><a href="#">INSPIRATIONS</a></li>
+    </ul>
+	</section>
+            </div>	</header>
+    <!-- End fixed_nav -->
+    <!--- Wrapper----->
+    <div>
+    <section class="main-part" style="margin-top:120px">
+      
+  
+
+<!---profile--->
+
+<div class="profile-part">
+    <div class="profile">                
+          <img src="../img/billboard.jpg" alt="mymade">
+          </div>
+    <div class="profile-figure">
+            <h2 style="font-style:italic; font-size:22px; font-weight:100 ">@MyMade</h2>
+            <h5 style="font-size:13px; font-weight:100">Super User</h5>
+            <h5 style="font-size:13px; font-weight:100">Official account of MY Made</h5>
+        </div>
+            <div><ul class="list-inline">
+               <div style="font-size:12px; font-family:Arial, Helvetica, sans-serif"> 
+               <li style="margin-left:11px">
+                    <a href="#">
+                    10 Creations,
+                    
+                    7 Public</a>
+                </li>
+                <li>
+                    <a href="#">20 Followers</a>
+                    
+                </li>
+                <li>
+                    <a href="#">0 Following</a>
+                </li></div>
+            </ul>
+            </div>
+        </div>
+            <a style="margin-left:18px; font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW  <span style="text-transform: none">@MyMade</span></a>
+        </div>
+          </div>
+    </div>
+</div>
+<div>
+  <div style="text-align:center">
+    <h4 style="font-style:italic; font-size:14px; font-weight:100">Tihnk Tank Members</h4>
+    <div style="font-size:9px;  font-family:Arial, Helvetica, sans-serif; padding-top:6px">
+                    
+        sort by:
+        <a style="text-decoration:none;" href="#"><span>MOST FOLLOWED</span></a>
+        ·
+        <a style="text-decoration:none;" href="#"><span>· NEWEST</span></a>
+        ·
+        <a style="text-decoration:none;" href="#"><span>ALPHABETICAL</span></a>
+        ·
+        <a style="text-decoration:none;" href="#" class="selected_sort"><span>ALPHABETICAL(REVERSE)</span></a>
+    </div>
+      
+    <div class="follow" style=" text-align: center;  margin-top:15px;">
+    <table style="width:1100px; margin-left:10%">
+    	<tr>
+    		<td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+                <a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td>   		
+    	</tr>
+    
+    <tr>
+    		<td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td>   		
+    	</tr>
+    
+    <tr>
+    		<td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td> 
+            
+            <td style="width:20%; text-align: center; color:#999999">
+    			<div>
+    				<img src="../img/billboard.jpg" style="height: 200px; width: 200px; border-radius:50%"/>
+    			
+    			</div>
+    			 <div>
+    			<p style="padding: 0px 5px 5px 5px;">@MyMade</p>
+				<a style="font-family:Tahoma, Geneva, sans-serif; letter-spacing:2px; font-size:10px; color:#fff; padding:3px 10px 3px 10px; text-decoration:none; background-color:#666; border-radius:2px" id="follow" href="#">FOLLOW</a>    			
+    			</div>
+    	
+    		</td>   		
+    	</tr>
+    
+    </table>
+    
+    </div>
+  </div>
+  </div>
+  
+</div>
+
+
+                
+                </div>
+                
+
+                
+
+
+
+
+            </div>
+        </form>
+    </div>
+
+    <div style="text-align:center; color:#000; margin-top:50px; font-size:14px;">
+    <a style="text-decoration:none;" href="#"><span>Previous</span></a>
+        |
+        <a style="text-decoration:none;" href="#"><span> Page 1 of 100</span></a>
+        |
+        <a style="text-decoration:none;" href="#"><span>Next</span></a> |
+        </div>                
+                    
+</div>
+  </div>
+    <footer>
+	  <div class="wrapper">
+		  <div class="footer_widget">
+				 	</div>
+		</div>
+	</footer>
+<!-- End Footer -->
+	</body>
+</html>
